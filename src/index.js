@@ -1,10 +1,22 @@
-import React from 'react'
+// @flow
+
+import * as React from 'react'
+import { Provider } from 'react-redux'
 import ReactDOM from 'react-dom'
-
-import App from './components/App'
+import App from './containers/App'
 import registerServiceWorker from './registerServiceWorker'
+import configureStore from './store'
+// import { thunkWorld } from './containers/ScreensContainer/logic'
 
-import './init.js'
+import './init'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+const store = configureStore()
+// store.dispatch(thunkWorld())
+
+ReactDOM.render(
+	<Provider store={store}>
+		<App />
+	</Provider>,
+	document.getElementById('root'),
+)
 registerServiceWorker()
