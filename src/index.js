@@ -11,11 +11,14 @@ import './init'
 
 const store = configureStore()
 // store.dispatch(thunkWorld())
+const rootEl = document.getElementById('root')
 
-ReactDOM.render(
-	<Provider store={store}>
-		<App />
-	</Provider>,
-	document.getElementById('root'),
-)
-registerServiceWorker()
+if (rootEl !== null) {
+	ReactDOM.render(
+		<Provider store={store}>
+			<App />
+		</Provider>,
+		rootEl,
+	)
+	registerServiceWorker()
+}

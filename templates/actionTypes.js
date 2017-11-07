@@ -1,5 +1,5 @@
 // @flow
 
-export const Actions = {};
+export const Actions = {}
 
-export type Action = ;
+export type Action = {}
