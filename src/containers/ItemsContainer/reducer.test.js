@@ -1,5 +1,7 @@
-//
 // @flow
+import * as React from 'react'
+import { shallow } from 'enzyme'
+import toJson from 'enzyme-to-json'
 import reducer, { initialState } from './reducer'
 import * as actions from './actions'
 
