@@ -14,6 +14,7 @@
 	},
 	"dependencies": {
 		"moment": "^2.19.1",
+		"query-string": "^5.0.1",
 		"react": "^16.0.0",
 		"react-dom": "^16.0.0",
 		"react-redux": "^5.0.6",
@@ -44,6 +45,9 @@
 		"s2s-plugins-redux": "^0.3.2"
 	},
 	"lint-staged": {
-		"src/**/*.js": ["prettier --config ./.prettierrc --write", "git add"]
+		"src/**/*.js": [
+			"prettier --config ./.prettierrc --write",
+			"git add"
+		]
 	}
 }
