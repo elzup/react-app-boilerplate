@@ -1,6 +1,27 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import {
+	BrowserRouter as Router,
+	Route,
+	Link,
+	Redirect,
+} from 'react-router-dom'
+import queryString from 'query-string'
+
 import Home from '../../components/Home'
+
+const SafeHome = props => {
+	const params = queryString.parse(props.location.search)
+	if (params.p) {
+		const page = params.p
+		delete params.p
+		const qs = queryString.stringify(params)
+		const to = page + (qs ? '?' + qs : '')
+		return <Redirect to={to} />
+	}
+	if (true) {
+		return <Home />
+	}
+}
 
 const About = () => (
 	<div>
@@ -55,7 +76,7 @@ const App = () => (
 
 			<hr />
 
-			<Route exact path="/" component={Home} />
+			<Route exact path="/" component={SafeHome} />
 			<Route path="/about" component={About} />
 			<Route path="/topics" component={Topics} />
 		</div>
