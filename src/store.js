@@ -3,7 +3,7 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import reducer from './reducer'
 import type { Store } from './types'
-import { persistStore, autoRehydrate } from 'redux-persist'
+import { persistStore } from 'redux-persist'
 
 export default () => {
 	const middleware = [thunk]
@@ -13,8 +13,8 @@ export default () => {
 
 	// HACKME:
 	const composer = !!devtool
-		? compose(applyMiddleware(...middleware), autoRehydrate(), devtool)
-		: compose(applyMiddleware(...middleware), autoRehydrate())
+		? compose(applyMiddleware(...middleware), devtool)
+		: compose(applyMiddleware(...middleware))
 
 	const store: Store = createStore(reducer, composer)
 	persistStore(store)

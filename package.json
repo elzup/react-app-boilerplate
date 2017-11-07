@@ -8,6 +8,7 @@
 		"test": "react-scripts test --env=jsdom",
 		"eject": "react-scripts eject",
 		"deploy": "gh-pages -d build",
+		"flow": "flow",
 		"precommit": "lint-staged"
 	},
 	"dependencies": {
@@ -32,8 +33,9 @@
 		"eslint-plugin-import": "^2.6.0",
 		"eslint-plugin-jsx-a11y": "^5.1.1",
 		"eslint-plugin-react": "^7.1.0",
-		"flow-bin": "^0.58.0",
+		"flow-bin": "^0.57.3",
 		"lint-staged": "^4.3.0",
+		"husky": "^0.14.3",
 		"prettier": "^1.7.4",
 		"react-test-renderer": "^16.0.0",
 		"s2s": "^0.11.0",

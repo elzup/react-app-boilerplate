@@ -15,7 +15,7 @@ export type Action = _Action | RehydrateAction
 export type GetState = () => State
 
 export type ThunkAction = (
-	dispatch: ReduxDispatch,
+	dispatch: ReduxDispatch<*>,
 	getState: GetState,
 ) => void | Promise<void>
 
