@@ -16,7 +16,7 @@ const SafeHome = props => {
 		delete params.p
 		const qs = queryString.stringify(params)
 		const to = page + (qs ? '?' + qs : '')
-		return <Redirect to={to} />
+		return <Redirect to={props.match.url + to} />
 	}
 	if (true) {
 		return <Home />
