@@ -28,6 +28,7 @@
 	"devDependencies": {
 		"babel-eslint": "^7.2.3",
 		"babel-jest": "^21.2.0",
+		"babel-plugin-s2s-variable-initializing": "^0.1.4",
 		"enzyme": "^3.1.1",
 		"enzyme-adapter-react-16": "^1.0.4",
 		"enzyme-to-json": "^3.2.1",

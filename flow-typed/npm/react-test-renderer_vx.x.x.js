@@ -1,4 +1,4 @@
-// flow-typed signature: 6c3213096a44a0645915e3a7d72e878b
+// flow-typed signature: d59dc6b09831585ac9020d2cc17f19f8
 // flow-typed version: <<STUB>>/react-test-renderer_v^16.0.0/flow_v0.57.3
 
 /**
@@ -26,7 +26,15 @@ declare module 'react-test-renderer/cjs/react-test-renderer-shallow.development'
   declare module.exports: any;
 }
 
+declare module 'react-test-renderer/cjs/react-test-renderer-shallow.production.min' {
+  declare module.exports: any;
+}
+
 declare module 'react-test-renderer/cjs/react-test-renderer.development' {
+  declare module.exports: any;
+}
+
+declare module 'react-test-renderer/cjs/react-test-renderer.production.min' {
   declare module.exports: any;
 }
 
@@ -34,16 +42,18 @@ declare module 'react-test-renderer/shallow' {
   declare module.exports: any;
 }
 
-declare module 'react-test-renderer/stack' {
-  declare module.exports: any;
-}
-
 // Filename aliases
 declare module 'react-test-renderer/cjs/react-test-renderer-shallow.development.js' {
   declare module.exports: $Exports<'react-test-renderer/cjs/react-test-renderer-shallow.development'>;
 }
+declare module 'react-test-renderer/cjs/react-test-renderer-shallow.production.min.js' {
+  declare module.exports: $Exports<'react-test-renderer/cjs/react-test-renderer-shallow.production.min'>;
+}
 declare module 'react-test-renderer/cjs/react-test-renderer.development.js' {
   declare module.exports: $Exports<'react-test-renderer/cjs/react-test-renderer.development'>;
+}
+declare module 'react-test-renderer/cjs/react-test-renderer.production.min.js' {
+  declare module.exports: $Exports<'react-test-renderer/cjs/react-test-renderer.production.min'>;
 }
 declare module 'react-test-renderer/index' {
   declare module.exports: $Exports<'react-test-renderer'>;
@@ -53,7 +63,4 @@ declare module 'react-test-renderer/index.js' {
 }
 declare module 'react-test-renderer/shallow.js' {
   declare module.exports: $Exports<'react-test-renderer/shallow'>;
-}
-declare module 'react-test-renderer/stack.js' {
-  declare module.exports: $Exports<'react-test-renderer/stack'>;
 }
