@@ -19,7 +19,7 @@ export type ThunkAction = (
 	getState: GetState,
 ) => void | Promise<void>
 
-type ThunkDispatch<A> = ThunkAction => A
+type ThunkDispatch<A> = (ta: ThunkAction) => A
 
 export type Dispatch = ReduxDispatch<Action> & ThunkDispatch<Action>
 export type Store = ReduxStore<State, Action, Dispatch>
