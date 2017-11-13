@@ -27,6 +27,7 @@
 	},
 	"devDependencies": {
 		"babel-eslint": "^7.2.3",
+		"babel-jest": "^21.2.0",
 		"enzyme": "^3.1.1",
 		"enzyme-adapter-react-16": "^1.0.4",
 		"enzyme-to-json": "^3.2.1",
@@ -39,6 +40,7 @@
 		"flow-bin": "^0.57.3",
 		"gh-pages": "^1.0.0",
 		"husky": "^0.14.3",
+		"jest": "^21.2.1",
 		"lint-staged": "^4.3.0",
 		"prettier": "^1.7.4",
 		"react-test-renderer": "^16.0.0",
