@@ -10,9 +10,12 @@
 		"eject": "react-scripts eject",
 		"deploy": "npm run build && gh-pages -d build",
 		"flow": "flow",
+		"gen:env":
+			"cp templates/temp.env .env.development.local && cp templates/temp.env .env.production.local",
 		"precommit": "lint-staged"
 	},
 	"dependencies": {
+		"camelcase-keys-recursive": "^0.8.2",
 		"moment": "^2.19.1",
 		"query-string": "^5.0.1",
 		"react": "^16.0.0",
@@ -23,10 +26,13 @@
 		"redux": "^3.7.2",
 		"redux-persist": "^5.2.2",
 		"redux-thunk": "^2.2.0",
-		"styled-components": "^2.2.3"
+		"styled-components": "^2.2.3",
+		"superagent": "^3.8.1"
 	},
 	"devDependencies": {
 		"babel-eslint": "^7.2.3",
+		"babel-jest": "^21.2.0",
+		"babel-plugin-s2s-variable-initializing": "^0.1.4",
 		"enzyme": "^3.1.1",
 		"enzyme-adapter-react-16": "^1.0.4",
 		"enzyme-to-json": "^3.2.1",
@@ -37,7 +43,9 @@
 		"eslint-plugin-jsx-a11y": "^5.1.1",
 		"eslint-plugin-react": "^7.1.0",
 		"flow-bin": "^0.57.3",
+		"gh-pages": "^1.0.0",
 		"husky": "^0.14.3",
+		"jest": "^21.2.1",
 		"lint-staged": "^4.3.0",
 		"prettier": "^1.7.4",
 		"react-test-renderer": "^16.0.0",
@@ -45,9 +53,6 @@
 		"s2s-plugins-redux": "^0.3.2"
 	},
 	"lint-staged": {
-		"src/**/*.js": [
-			"prettier --config ./.prettierrc --write",
-			"git add"
-		]
+		"src/**/*.js": ["prettier --config ./.prettierrc --write", "git add"]
 	}
 }

@@ -1,8 +1,8 @@
 // @flow
-import type { Action } from '../../types'
-import { Actions } from './actionTypes'
+import type { Action, Item } from '../../types'
+import { Actions } from '../ItemsContainer/actionTypes'
 
-export type State = {}
+export type State = { [id: number | string]: Item }
 
 export const initialState: State = {}
 
@@ -11,12 +11,12 @@ export default function(state: State = initialState, action: Action): State {
 		case Actions.RECEIVE_ITEM:
 			return {
 				...state,
+				[action.item.id]: action.item,
 			}
 
 		case Actions.DELETE_ITEM:
-			return {
-				...state,
-			}
+			delete state[action.id]
+			return state
 
 		default:
 			return state

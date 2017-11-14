@@ -3,11 +3,14 @@ import * as React from 'react'
 import { Provider } from 'react-redux'
 import ReactDOM from 'react-dom'
 import App from './containers/App'
-import registerServiceWorker from './registerServiceWorker'
+import registerServiceWorker from './config/registerServiceWorker'
 import configureStore from './store'
+import config from './config'
 // import { thunkWorld } from './containers/ScreensContainer/logic'
 
-import './init'
+import './config/init'
+
+console.log(config)
 
 const store = configureStore()
 // store.dispatch(thunkWorld())

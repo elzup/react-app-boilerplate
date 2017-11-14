@@ -1,3 +1,4 @@
+// @flow
 import React from 'react'
 import {
 	BrowserRouter as Router,
@@ -8,6 +9,7 @@ import {
 import queryString from 'query-string'
 
 import Home from '../../components/Home'
+import StyledLink from '../../components/StyledLink'
 
 const SafeHome = props => {
 	const params = queryString.parse(props.location.search)
@@ -16,7 +18,7 @@ const SafeHome = props => {
 		delete params.p
 		const qs = queryString.stringify(params)
 		const to = page + (qs ? '?' + qs : '')
-		return <Redirect to={to} />
+		return <Redirect to={props.match.url + to} />
 	}
 	if (true) {
 		return <Home />
@@ -64,13 +66,13 @@ const App = () => (
 		<div>
 			<ul>
 				<li>
-					<Link to="/">Home</Link>
+					<StyledLink to="/" label="Home" />
 				</li>
 				<li>
-					<Link to="/about">About</Link>
+					<StyledLink to="/about" label="About" />
 				</li>
 				<li>
-					<Link to="/topics">Topics</Link>
+					<StyledLink to="/topics" label="Topics" />
 				</li>
 			</ul>
 
