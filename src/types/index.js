@@ -12,6 +12,11 @@ type RehydrateAction = {
 export type State = _State
 export type Action = _Action | RehydrateAction
 
+export type Reducer = (state: State, action: Action) => State
+export type Reducers = {
+	[key: string]: Reducer,
+}
+
 export type GetState = () => State
 
 export type ThunkAction = (

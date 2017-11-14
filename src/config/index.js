@@ -1,10 +1,11 @@
 // @flow
 
+import _combineReducers from './combineReducers'
 const { NODE_ENV, REACT_APP_HOGE, REACT_APP_FUGA_URL } = process.env
 
-if (REACT_APP_HOGE === null || REACT_APP_FUGA_URL === null || !NODE_ENV) {
-	console.error('Configuration not completed. must setup envioraments.')
+if (!REACT_APP_HOGE || !REACT_APP_FUGA_URL || !NODE_ENV) {
 	console.error(process.env)
+	throw Error('Configuration not completed. must setup envioraments.')
 }
 
 type Config = {
@@ -35,7 +36,10 @@ const config: Config = {
 	isDev,
 	hoge: REACT_APP_HOGE,
 	fugaURL: REACT_APP_FUGA_URL,
+	admin: { name: '', countMax: 0 },
 	...(isDev ? configDevelopment : configProduction),
 }
+
+export const combineReducers = _combineReducers
 
 export default config

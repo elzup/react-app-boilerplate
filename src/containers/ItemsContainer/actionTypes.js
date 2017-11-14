@@ -1,4 +1,7 @@
 // @flow
+
+import type { Item } from '../../types'
+
 export const RECEIVE_ITEM: 'ItemsContainer/RECEIVE_ITEM' =
 	'ItemsContainer/RECEIVE_ITEM'
 export const DELETE_ITEM: 'ItemsContainer/DELETE_ITEM' =
@@ -11,8 +14,9 @@ export const Actions = {
 
 export type ReceiveItem = {
 	type: typeof RECEIVE_ITEM,
-	name: string,
+	item: Item,
 }
+
 export type DeleteItem = {
 	type: typeof DELETE_ITEM,
 	id: number,
