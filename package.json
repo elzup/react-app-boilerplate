@@ -10,6 +10,8 @@
 		"eject": "react-scripts eject",
 		"deploy": "npm run build && gh-pages -d build",
 		"flow": "flow",
+		"gen:env":
+			"cp templates/temp.env .env.development.local && cp templates/temp.env .env.production.local",
 		"precommit": "lint-staged"
 	},
 	"dependencies": {
@@ -51,9 +53,6 @@
 		"s2s-plugins-redux": "^0.3.2"
 	},
 	"lint-staged": {
-		"src/**/*.js": [
-			"prettier --config ./.prettierrc --write",
-			"git add"
-		]
+		"src/**/*.js": ["prettier --config ./.prettierrc --write", "git add"]
 	}
 }
