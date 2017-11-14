@@ -2,8 +2,9 @@
 import * as React from 'react'
 import { connect, type Connector } from 'react-redux'
 import type { State, Product } from '../../types'
-import * as selectors from './selectors'
+// import * as selectors from './selectors'
 
+type OProps = {}
 type Props = {}
 
 class Container extends React.Component<Props> {
@@ -13,10 +14,8 @@ class Container extends React.Component<Props> {
 	}
 }
 
-const ms = (state: State) => ({
-	TODO: selectors.TODO,
-})
+const ms = (state: State) => ({ })
 
-const conn: Connector<{}, Props> = connect(ms, { TODO })
+const conn: Connector<OProps, Props> = connect(ms, {})
 
 export default conn(Container)
