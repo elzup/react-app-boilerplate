@@ -23,7 +23,7 @@ const rootStatePath = getTyepDir('state.js')
 
 const plugins = [
 	{
-		test: /.*.js$/,
+		test: /src\/.*.js$/,
 		plugin: ['s2s-variable-initializing'],
 	},
 	{

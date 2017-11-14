@@ -13,6 +13,7 @@
 		"precommit": "lint-staged"
 	},
 	"dependencies": {
+		"camelcase-keys-recursive": "^0.8.2",
 		"moment": "^2.19.1",
 		"query-string": "^5.0.1",
 		"react": "^16.0.0",
@@ -23,7 +24,8 @@
 		"redux": "^3.7.2",
 		"redux-persist": "^5.2.2",
 		"redux-thunk": "^2.2.0",
-		"styled-components": "^2.2.3"
+		"styled-components": "^2.2.3",
+		"superagent": "^3.8.1"
 	},
 	"devDependencies": {
 		"babel-eslint": "^7.2.3",
