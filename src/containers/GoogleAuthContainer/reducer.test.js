@@ -11,9 +11,11 @@ test('handle GOOGLE_LOGIN', () => {
 		reducer(
 			initialState,
 			actions.googleLogin({
-				uid: 'hoge',
-				displayName: 'ハロー',
-				email: 'piyo@a.b',
+				payload: {
+					uid: 'hoge',
+					displayName: 'ハロー',
+					email: 'piyo@a.b',
+				},
 			}),
 		),
 	).toEqual({

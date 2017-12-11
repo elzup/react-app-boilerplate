@@ -36,10 +36,12 @@ export type Auth = {
 	email: string,
 }
 
-export type GoogleAuthPayload = {
-	uid: string,
-	displayName: string,
-	email: string,
+export type GoogleAuthState = {
+	payload: {
+		uid: string,
+		displayName: string,
+		email: string,
+	},
 }
 
 export type Item = {
