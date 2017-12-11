@@ -16,7 +16,7 @@ export default function(state: State = initialState, action: Action): State {
 		case Actions.GOOGLE_LOGIN:
 			return {
 				...state,
-				...action.authState.payload,
+				...action.firebaseUser,
 				authorized: true,
 			}
 

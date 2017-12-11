@@ -1,5 +1,5 @@
 // @flow
-import type { GoogleAuthState } from '../../types/'
+import type { FirebaseUser } from '../../types/'
 
 export const GOOGLE_LOGIN: 'GoogleAuthContainer/GOOGLE_LOGIN' =
 	'GoogleAuthContainer/GOOGLE_LOGIN'
@@ -13,7 +13,7 @@ export const Actions = {
 
 export type GoogleLogin = {
 	type: typeof GOOGLE_LOGIN,
-	authState: GoogleAuthState,
+	firebaseUser: FirebaseUser,
 }
 
 export type GoogleLogout = {

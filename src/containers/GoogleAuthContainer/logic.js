@@ -1,7 +1,7 @@
 // @flow
 import firebase from 'firebase'
 
-import type { ThunkAction, GoogleAuthState } from '../../types'
+import type { ThunkAction, FirebaseUser } from '../../types'
 import * as actions from './actions'
 
 export function doLogin(): ThunkAction {
@@ -13,7 +13,7 @@ export function doLogin(): ThunkAction {
 
 export function refLogin(): ThunkAction {
 	return dispatch => {
-		firebase.auth().onAuthStateChanged((user: GoogleAuthState) => {
+		firebase.auth().onAuthStateChanged((user: ?FirebaseUser) => {
 			if (!user) {
 				return
 			}
