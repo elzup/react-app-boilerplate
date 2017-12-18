@@ -8,6 +8,7 @@ const {
 	REACT_APP_FIREBASE_DATABASE_URL,
 	REACT_APP_FIREBASE_PROJECT_ID,
 	REACT_APP_FIREBASE_STORAGE_BUCKET,
+	REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
 } = process.env
 
 if (
@@ -16,6 +17,7 @@ if (
 	!REACT_APP_FIREBASE_DATABASE_URL ||
 	!REACT_APP_FIREBASE_PROJECT_ID ||
 	!REACT_APP_FIREBASE_STORAGE_BUCKET ||
+	!REACT_APP_FIREBASE_MESSAGING_SENDER_ID ||
 	!NODE_ENV
 ) {
 	console.error(process.env)
@@ -27,9 +29,10 @@ type Config = {
 	+firebase: {
 		+apiKey: string,
 		+authDomain: string,
-		+databaseUrl: string,
+		+databaseURL: string,
 		+projectId: string,
 		+storageBucket: string,
+		+messagingSenderId: string,
 	},
 	+admin: {
 		+name: string,
@@ -56,9 +59,10 @@ const config: Config = {
 	firebase: {
 		apiKey: REACT_APP_FIREBASE_API_KEY,
 		authDomain: REACT_APP_FIREBASE_AUTH_DOMAIN,
-		databaseUrl: REACT_APP_FIREBASE_DATABASE_URL,
+		databaseURL: REACT_APP_FIREBASE_DATABASE_URL,
 		projectId: REACT_APP_FIREBASE_PROJECT_ID,
 		storageBucket: REACT_APP_FIREBASE_STORAGE_BUCKET,
+		messagingSenderId: REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
 	},
 	admin: { name: '', countMax: 0 },
 	...(isDev ? configDevelopment : configProduction),
