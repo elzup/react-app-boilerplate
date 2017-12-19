@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@babel/cli@^7.0.0-beta.35":
+"@babel/cli@^7.0.0-beta.32":
   version "7.0.0-beta.35"
   resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.0.0-beta.35.tgz#9e180810080f29daa917747e2f08fe1b903a7e46"
   dependencies:
@@ -24,6 +24,35 @@
     chalk "^2.0.0"
     esutils "^2.0.2"
     js-tokens "^3.0.0"
+
+"@babel/core@^7.0.0-beta.34":
+  version "7.0.0-beta.35"
+  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.0.0-beta.35.tgz#69dc61d317c73177b91fdc4432619f997155b60f"
+  dependencies:
+    "@babel/code-frame" "7.0.0-beta.35"
+    "@babel/generator" "7.0.0-beta.35"
+    "@babel/helpers" "7.0.0-beta.35"
+    "@babel/template" "7.0.0-beta.35"
+    "@babel/traverse" "7.0.0-beta.35"
+    "@babel/types" "7.0.0-beta.35"
+    babylon "7.0.0-beta.35"
+    convert-source-map "^1.1.0"
+    debug "^3.0.1"
+    json5 "^0.5.0"
+    lodash "^4.2.0"
+    micromatch "^2.3.11"
+    resolve "^1.3.2"
+    source-map "^0.5.0"
+
+"@babel/generator@7.0.0-beta.35":
+  version "7.0.0-beta.35"
+  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.0.0-beta.35.tgz#09798d7e714ef8a3cd6ac27afb140e21c2794cef"
+  dependencies:
+    "@babel/types" "7.0.0-beta.35"
+    jsesc "^2.5.1"
+    lodash "^4.2.0"
+    source-map "^0.5.0"
+    trim-right "^1.0.1"
 
 "@babel/helper-annotate-as-pure@7.0.0-beta.35":
   version "7.0.0-beta.35"
@@ -146,6 +175,14 @@
     "@babel/traverse" "7.0.0-beta.35"
     "@babel/types" "7.0.0-beta.35"
 
+"@babel/helpers@7.0.0-beta.35":
+  version "7.0.0-beta.35"
+  resolved "https://registry.yarnpkg.com/@babel/helpers/-/helpers-7.0.0-beta.35.tgz#8cde270b68c227dca8cb35cd30c6eb3e5a280c09"
+  dependencies:
+    "@babel/template" "7.0.0-beta.35"
+    "@babel/traverse" "7.0.0-beta.35"
+    "@babel/types" "7.0.0-beta.35"
+
 "@babel/plugin-check-constants@7.0.0-beta.35":
   version "7.0.0-beta.35"
   resolved "https://registry.yarnpkg.com/@babel/plugin-check-constants/-/plugin-check-constants-7.0.0-beta.35.tgz#18cca7d9fbba746171c879ced7c69defbdc8bc11"
@@ -187,6 +224,10 @@
 "@babel/plugin-syntax-optional-catch-binding@7.0.0-beta.35":
   version "7.0.0-beta.35"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-optional-catch-binding/-/plugin-syntax-optional-catch-binding-7.0.0-beta.35.tgz#a2451f5dd30f858d31ec55ce12602f43d2cf5cdc"
+
+"@babel/plugin-syntax-typescript@^7.0.0-beta.34":
+  version "7.0.0-beta.35"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-typescript/-/plugin-syntax-typescript-7.0.0-beta.35.tgz#f47c5dea85d3bfa992de9e3070b6b19be9c42a0e"
 
 "@babel/plugin-transform-arrow-functions@7.0.0-beta.35":
   version "7.0.0-beta.35"
@@ -330,7 +371,7 @@
     "@babel/helper-regex" "7.0.0-beta.35"
     regexpu-core "^4.1.3"
 
-"@babel/preset-env@^7.0.0-beta.35":
+"@babel/preset-env@^7.0.0-beta.32":
   version "7.0.0-beta.35"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.0.0-beta.35.tgz#634431813b14ebe841f293fbf459a3ffa61d7ef6"
   dependencies:
@@ -1022,73 +1063,74 @@ babel-plugin-lodash@^3.3.2:
     lodash "^4.17.4"
     require-package-name "^2.0.1"
 
-babel-plugin-s2s-action-creater@^0.2.6:
-  version "0.2.7"
-  resolved "https://registry.yarnpkg.com/babel-plugin-s2s-action-creater/-/babel-plugin-s2s-action-creater-0.2.7.tgz#e0c50b6f3990e1f549f2bd9b7699bf631258c375"
+babel-plugin-s2s-action-creater@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-s2s-action-creater/-/babel-plugin-s2s-action-creater-0.3.0.tgz#41d7dd5b0322e51e9ce4174d251be343298b3a4c"
   dependencies:
     babel-add-flow-comments "^0.3.0"
     babel-plugin-syntax-flow "^6.18.0"
     babel-types "^6.26.0"
     lodash.camelcase "^4.3.0"
     lodash.snakecase "^4.1.1"
-    s2s-utils "^0.5.0"
+    s2s-utils "^0.6.0"
 
-babel-plugin-s2s-action-root@^0.3.6:
-  version "0.3.7"
-  resolved "https://registry.yarnpkg.com/babel-plugin-s2s-action-root/-/babel-plugin-s2s-action-root-0.3.7.tgz#ee5cf87be168d083f247bf010b055b6fbce62de8"
+babel-plugin-s2s-action-root@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-s2s-action-root/-/babel-plugin-s2s-action-root-0.4.1.tgz#73954f40878a27f1d8a6d2a20738bc1b0e347e3e"
   dependencies:
     babel-add-flow-comments "^0.3.0"
     babel-plugin-syntax-flow "^6.18.0"
     babel-template "^6.26.0"
     babel-types "^6.26.0"
-    globby "^6.1.0"
-    s2s-utils "^0.5.0"
+    globby "^7.1.1"
+    s2s-utils "^0.6.0"
     uppercamelcase "^3.0.0"
 
-babel-plugin-s2s-action-types@^0.4.6:
-  version "0.4.7"
-  resolved "https://registry.yarnpkg.com/babel-plugin-s2s-action-types/-/babel-plugin-s2s-action-types-0.4.7.tgz#afd2fc6ae1dd0dbbeaaf576a0244c77ea906b58c"
+babel-plugin-s2s-action-types@^0.4.8:
+  version "0.4.8"
+  resolved "https://registry.yarnpkg.com/babel-plugin-s2s-action-types/-/babel-plugin-s2s-action-types-0.4.8.tgz#acd05ff34b1398460554ff7df3f85b16e0ba8ac6"
   dependencies:
     babel-add-flow-comments "^0.3.0"
     babel-plugin-syntax-flow "^6.18.0"
     babel-types "^6.26.0"
     lodash.snakecase "^4.1.1"
-    s2s-utils "^0.5.0"
+    s2s-utils "^0.6.0"
+    slash "^1.0.0"
 
-babel-plugin-s2s-initial-state-creater@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/babel-plugin-s2s-initial-state-creater/-/babel-plugin-s2s-initial-state-creater-0.2.4.tgz#73e3e2f101b16b14f260533b55b55af18ce32af4"
+babel-plugin-s2s-initial-state-creater@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-s2s-initial-state-creater/-/babel-plugin-s2s-initial-state-creater-0.3.1.tgz#761969f3d1b4cb4681d9476183abaa1a9d9fa343"
   dependencies:
     babel-generator "^6.26.0"
     babylon "^6.18.0"
-    flow-faker "^0.1.4"
+    flow-faker "^0.2.0"
     json5 "^0.5.1"
-    s2s-babel-flow-types "^0.2.2"
-    s2s-utils "^0.4.2"
+    s2s-utils "^0.6.0"
     typed-assign "^0.1.1"
 
-babel-plugin-s2s-reducer-case-creater@^0.1.5:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/babel-plugin-s2s-reducer-case-creater/-/babel-plugin-s2s-reducer-case-creater-0.1.6.tgz#15f6164d9a8b166d753c038aa103dfb3a9669c08"
+babel-plugin-s2s-reducer-case-creater@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/babel-plugin-s2s-reducer-case-creater/-/babel-plugin-s2s-reducer-case-creater-0.1.7.tgz#a25e35b398129a418ace3d9f17eb0a42b7869b05"
   dependencies:
     babel-types "^6.26.0"
-    s2s-helper-get-action-obj "^0.1.4"
-    s2s-utils "^0.5.0"
+    s2s-helper-get-action-obj "^0.1.5"
+    s2s-utils "^0.6.0"
+    uppercamelcase "^3.0.0"
 
-babel-plugin-s2s-reducer-root@^0.3.0:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/babel-plugin-s2s-reducer-root/-/babel-plugin-s2s-reducer-root-0.3.1.tgz#b169b1938d88a7adab1530abda24b80a1f66e34f"
+babel-plugin-s2s-reducer-root@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/babel-plugin-s2s-reducer-root/-/babel-plugin-s2s-reducer-root-0.3.3.tgz#ee24450f289ceafa1a7b5bc0f7b7b916cea81936"
   dependencies:
     babel-add-flow-comments "^0.3.0"
     babel-plugin-syntax-flow "^6.18.0"
     babel-types "^6.26.0"
-    globby "^6.1.0"
-    s2s-utils "^0.5.0"
+    globby "^7.1.1"
+    s2s-utils "^0.6.0"
     uppercamelcase "^3.0.0"
 
-babel-plugin-s2s-reducer-test-case@^0.4.7:
-  version "0.4.8"
-  resolved "https://registry.yarnpkg.com/babel-plugin-s2s-reducer-test-case/-/babel-plugin-s2s-reducer-test-case-0.4.8.tgz#b2850b50f8d293abd8151ae1c84d84b78ea16fbc"
+babel-plugin-s2s-reducer-test-case@^0.4.9:
+  version "0.4.9"
+  resolved "https://registry.yarnpkg.com/babel-plugin-s2s-reducer-test-case/-/babel-plugin-s2s-reducer-test-case-0.4.9.tgz#9623369e974b9415f690ef5d28db1f19d162217b"
   dependencies:
     babel-add-flow-comments "^0.3.0"
     babel-looks-like "^0.1.0"
@@ -1096,19 +1138,19 @@ babel-plugin-s2s-reducer-test-case@^0.4.7:
     babel-polyfill "^6.26.0"
     babel-types "^6.26.0"
     camelcase "^4.1.0"
-    s2s-helper-get-initial-state "^0.2.4"
-    s2s-helper-get-reducer-case "^0.2.5"
-    s2s-utils "^0.5.0"
+    s2s-helper-get-initial-state "^0.2.5"
+    s2s-helper-get-reducer-case "^0.2.6"
+    s2s-utils "^0.6.0"
 
-babel-plugin-s2s-state-root@^0.2.6:
-  version "0.2.7"
-  resolved "https://registry.yarnpkg.com/babel-plugin-s2s-state-root/-/babel-plugin-s2s-state-root-0.2.7.tgz#173421f924194b11b84e1d111877e6afa72cfbc0"
+babel-plugin-s2s-state-root@^0.2.9:
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/babel-plugin-s2s-state-root/-/babel-plugin-s2s-state-root-0.2.9.tgz#2d0b3c0605c8d58f6b2a34fb930d8a20bdbd5cd6"
   dependencies:
     babel-add-flow-comments "^0.3.0"
     babel-plugin-syntax-flow "^6.18.0"
     babel-types "^6.26.0"
-    globby "^6.1.0"
-    s2s-utils "^0.5.0"
+    globby "^7.1.1"
+    s2s-utils "^0.6.0"
     uppercamelcase "^3.0.0"
 
 babel-plugin-s2s-variable-initializing@^0.1.4:
@@ -2600,6 +2642,13 @@ diffie-hellman@^5.0.0:
     miller-rabin "^4.0.0"
     randombytes "^2.0.0"
 
+dir-glob@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/dir-glob/-/dir-glob-2.0.0.tgz#0b205d2b6aef98238ca286598a8204d29d0a0034"
+  dependencies:
+    arrify "^1.0.1"
+    path-type "^3.0.0"
+
 discontinuous-range@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/discontinuous-range/-/discontinuous-range-1.0.0.tgz#e38331f0844bba49b9a9cb71c771585aab1bc65a"
@@ -3434,13 +3483,27 @@ flow-execa@^0.1.5:
   dependencies:
     execa "^0.8.0"
 
-flow-faker@^0.1.4, flow-faker@^0.1.5:
+flow-execa@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/flow-execa/-/flow-execa-0.2.0.tgz#694137ac21bcd8bb288e159c0a54ea978baa077c"
+  dependencies:
+    execa "^0.8.0"
+
+flow-faker@^0.1.5:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/flow-faker/-/flow-faker-0.1.5.tgz#77694659b1425467b34348a1b0aae3742e7f8d97"
   dependencies:
     babel-traverse "^6.26.0"
     babylon "^6.18.0"
     flow-execa "^0.1.5"
+
+flow-faker@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/flow-faker/-/flow-faker-0.2.0.tgz#102f61afaa86556b8e8960beef92eb9ddd969a31"
+  dependencies:
+    babel-traverse "^6.26.0"
+    babylon "^6.18.0"
+    flow-execa "^0.2.0"
 
 for-in@^1.0.1:
   version "1.0.2"
@@ -3671,6 +3734,17 @@ globby@^6.1.0:
     object-assign "^4.0.1"
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
+
+globby@^7.1.1:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/globby/-/globby-7.1.1.tgz#fb2ccff9401f8600945dfada97440cca972b8680"
+  dependencies:
+    array-union "^1.0.1"
+    dir-glob "^2.0.0"
+    glob "^7.1.2"
+    ignore "^3.3.5"
+    pify "^3.0.0"
+    slash "^1.0.0"
 
 got@^5.0.0:
   version "5.7.1"
@@ -3987,7 +4061,7 @@ ieee754@^1.1.4:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4"
 
-ignore@^3.3.3:
+ignore@^3.3.3, ignore@^3.3.5:
   version "3.3.7"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.7.tgz#612289bfb3c220e186a58118618d5be8c1bab021"
 
@@ -4687,6 +4761,10 @@ jsesc@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-1.3.0.tgz#46c3fec8c1892b12b0833db9bc7622176dbab34b"
 
+jsesc@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-2.5.1.tgz#e421a2a8e20d6b0819df28908f782526b96dd1fe"
+
 jsesc@~0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-0.5.0.tgz#e7dee66e35d6fc16f710fe91d5cf69f70f08911d"
@@ -5374,6 +5452,10 @@ normalize-package-data@^2.3.2, normalize-package-data@^2.3.4:
     semver "2 || 3 || 4 || 5"
     validate-npm-package-license "^3.0.1"
 
+normalize-path-sep@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/normalize-path-sep/-/normalize-path-sep-0.1.1.tgz#0f4308116ac0f4f603b33b83b1f0e42f517c1a02"
+
 normalize-path@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-1.0.0.tgz#32d0e472f91ff345701c15a8311018d3b0a90379"
@@ -5749,6 +5831,12 @@ path-type@^2.0.0:
   dependencies:
     pify "^2.0.0"
 
+path-type@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/path-type/-/path-type-3.0.0.tgz#cef31dc8e0a1a3bb0d105c0cd97cf3bf47f4e36f"
+  dependencies:
+    pify "^3.0.0"
+
 pbkdf2@^3.0.3:
   version "3.0.14"
   resolved "https://registry.yarnpkg.com/pbkdf2/-/pbkdf2-3.0.14.tgz#a35e13c64799b06ce15320f459c230e68e73bade"
@@ -6105,9 +6193,13 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier@^1.7.4, prettier@^1.8.0, prettier@^1.8.2:
+prettier@^1.7.4:
   version "1.8.2"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.8.2.tgz#bff83e7fd573933c607875e5ba3abbdffb96aeb8"
+
+prettier@^1.9.1:
+  version "1.9.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.9.2.tgz#96bc2132f7a32338e6078aeb29727178c6335827"
 
 pretty-bytes@^4.0.2:
   version "4.0.2"
@@ -6729,7 +6821,7 @@ resolve@1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
 
-resolve@^1.2.0:
+resolve@^1.2.0, resolve@^1.3.2:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.5.0.tgz#1f09acce796c9a762579f31b2c1cc4c3cddf9f36"
   dependencies:
@@ -6801,63 +6893,64 @@ rxjs@^5.0.0-beta.11:
   dependencies:
     symbol-observable "^1.0.1"
 
-s2s-babel-flow-types@^0.2.2:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/s2s-babel-flow-types/-/s2s-babel-flow-types-0.2.3.tgz#c29af95e6644c30f6e1e33ff5ba2dcf1facdef40"
-
-s2s-handler-babel@^0.1.1:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/s2s-handler-babel/-/s2s-handler-babel-0.1.2.tgz#b6abe4d7b9b40818f682bb7a41d28bc904e53e39"
+s2s-handler-babel@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/s2s-handler-babel/-/s2s-handler-babel-0.3.0.tgz#1f9197dd411cc5786ad71f1965168b461afbf213"
   dependencies:
     babel-core "^6.25.0"
+    s2s-helper-get-plugin-name "^0.1.0"
 
-s2s-helper-get-action-obj@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/s2s-helper-get-action-obj/-/s2s-helper-get-action-obj-0.1.4.tgz#19f9fbeaf8699c917ba9420cdcc89a75d6955cee"
+s2s-handler-typescript@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/s2s-handler-typescript/-/s2s-handler-typescript-0.3.0.tgz#bb1fe1b7cba8caa0cbd7f27a699d99fdfb974c4f"
+  dependencies:
+    "@babel/core" "^7.0.0-beta.34"
+    "@babel/plugin-syntax-typescript" "^7.0.0-beta.34"
+    s2s-helper-get-plugin-name "^0.1.0"
+
+s2s-helper-get-action-obj@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/s2s-helper-get-action-obj/-/s2s-helper-get-action-obj-0.1.5.tgz#1521aa15894ceb9faead19d613b566be6b27abf5"
   dependencies:
     babel-traverse "^6.26.0"
     babylon "^6.18.0"
 
-s2s-helper-get-initial-state@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/s2s-helper-get-initial-state/-/s2s-helper-get-initial-state-0.2.4.tgz#62f8b0630c7f800636a7f4574d177801c013fe29"
-  dependencies:
-    babel-traverse "^6.26.0"
-    babylon "^6.18.0"
-
-s2s-helper-get-reducer-case@^0.2.5:
+s2s-helper-get-initial-state@^0.2.5:
   version "0.2.5"
-  resolved "https://registry.yarnpkg.com/s2s-helper-get-reducer-case/-/s2s-helper-get-reducer-case-0.2.5.tgz#a8ca57ce981b6cf54584890965d5926d3571af22"
+  resolved "https://registry.yarnpkg.com/s2s-helper-get-initial-state/-/s2s-helper-get-initial-state-0.2.5.tgz#727d086d6d47e3c671239af0e2a771879c641166"
   dependencies:
     babel-traverse "^6.26.0"
     babylon "^6.18.0"
 
-s2s-hook-prettier@^0.2.0:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/s2s-hook-prettier/-/s2s-hook-prettier-0.2.1.tgz#65bf330eb7e8fe1979d61f28c7a43d08654fc8e7"
-  dependencies:
-    prettier "^1.8.2"
+s2s-helper-get-plugin-name@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/s2s-helper-get-plugin-name/-/s2s-helper-get-plugin-name-0.1.0.tgz#6ed1855be5d6638d3b2d32b9be7c7d5b6d532222"
 
-s2s-plugins-redux@^0.3.2:
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/s2s-plugins-redux/-/s2s-plugins-redux-0.3.5.tgz#c45c9f54a5c535d4482579abe801e00b14c27817"
+s2s-helper-get-reducer-case@^0.2.6:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/s2s-helper-get-reducer-case/-/s2s-helper-get-reducer-case-0.2.6.tgz#fc6666383cf76745f20a5ac969bd86cacf59edb8"
   dependencies:
-    babel-plugin-s2s-action-creater "^0.2.6"
-    babel-plugin-s2s-action-root "^0.3.6"
-    babel-plugin-s2s-action-types "^0.4.6"
-    babel-plugin-s2s-initial-state-creater "^0.2.4"
-    babel-plugin-s2s-reducer-case-creater "^0.1.5"
-    babel-plugin-s2s-reducer-root "^0.3.0"
-    babel-plugin-s2s-reducer-test-case "^0.4.7"
-    babel-plugin-s2s-state-root "^0.2.6"
+    babel-traverse "^6.26.0"
+    babylon "^6.18.0"
 
-s2s-utils@^0.4.2:
+s2s-hook-prettier@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/s2s-hook-prettier/-/s2s-hook-prettier-0.2.2.tgz#0a30377d314845c8b21bfc0960f9127e047b4422"
+  dependencies:
+    prettier "^1.9.1"
+
+s2s-plugins-redux@^0.4.2:
   version "0.4.2"
-  resolved "https://registry.yarnpkg.com/s2s-utils/-/s2s-utils-0.4.2.tgz#df0316b91502486803d4c52a1d88e6e41bbd04d2"
+  resolved "https://registry.yarnpkg.com/s2s-plugins-redux/-/s2s-plugins-redux-0.4.2.tgz#349d015a98956581ebbf4f39b36faf5fc804fb72"
   dependencies:
-    babel-template "^6.26.0"
-    babel-types "^6.26.0"
-    slash "^1.0.0"
+    babel-plugin-s2s-action-creater "^0.3.0"
+    babel-plugin-s2s-action-root "^0.4.1"
+    babel-plugin-s2s-action-types "^0.4.8"
+    babel-plugin-s2s-initial-state-creater "^0.3.1"
+    babel-plugin-s2s-reducer-case-creater "^0.1.7"
+    babel-plugin-s2s-reducer-root "^0.3.3"
+    babel-plugin-s2s-reducer-test-case "^0.4.9"
+    babel-plugin-s2s-state-root "^0.2.9"
 
 s2s-utils@^0.5.0:
   version "0.5.0"
@@ -6867,9 +6960,18 @@ s2s-utils@^0.5.0:
     babel-types "^6.26.0"
     slash "^1.0.0"
 
-s2s@^0.11.0:
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/s2s/-/s2s-0.11.1.tgz#d011b3059c4538b821536e5ef5e14650fc79345a"
+s2s-utils@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/s2s-utils/-/s2s-utils-0.6.0.tgz#ec116c134dbefb60f3da9b38f2da72084cc925bc"
+  dependencies:
+    babel-template "^6.26.0"
+    babel-types "^6.26.0"
+    normalize-path-sep "^0.1.1"
+    slash "^1.0.0"
+
+s2s@^0.15.0:
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/s2s/-/s2s-0.15.0.tgz#24baa84a8d32cc1efcd685e208e16e3575480662"
   dependencies:
     babel-polyfill "^6.26.0"
     chalk "^2.3.0"
@@ -6877,9 +6979,12 @@ s2s@^0.11.0:
     cp-file "^5.0.0"
     find-up "^2.1.0"
     key-locker "^0.2.0"
-    prettier "^1.8.0"
-    s2s-handler-babel "^0.1.1"
-    s2s-hook-prettier "^0.2.0"
+    micromatch "^2.3.11"
+    normalize-path-sep "^0.1.1"
+    prettier "^1.9.1"
+    s2s-handler-babel "^0.3.0"
+    s2s-handler-typescript "^0.3.0"
+    s2s-hook-prettier "^0.2.2"
     slash "^1.0.0"
 
 safe-buffer@5.1.1, safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:

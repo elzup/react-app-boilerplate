@@ -3,12 +3,12 @@ import type { Potato } from '../../types'
 
 export const CREATE_POTATO: 'PotatosContainer/CREATE_POTATO' =
 	'PotatosContainer/CREATE_POTATO'
-export const LOAD_POTATO: 'PotatosContainer/LOAD_POTATO' =
-	'PotatosContainer/LOAD_POTATO'
+export const LOAD_POTATOS: 'PotatosContainer/LOAD_POTATOS' =
+	'PotatosContainer/LOAD_POTATOS'
 
 export const Actions = {
 	CREATE_POTATO,
-	LOAD_POTATO,
+	LOAD_POTATOS,
 }
 
 export type CreatePotato = {
@@ -16,9 +16,9 @@ export type CreatePotato = {
 	potato: Potato,
 }
 
-export type LoadPotato = {
-	type: typeof LOAD_POTATO,
+export type LoadPotatos = {
+	type: typeof LOAD_POTATOS,
 	potatos: Potato[],
 }
 
-export type Action = CreatePotato | LoadPotato
+export type Action = CreatePotato | LoadPotatos

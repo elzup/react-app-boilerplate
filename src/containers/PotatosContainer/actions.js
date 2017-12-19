@@ -1,8 +1,8 @@
 // @flow
 import type { Potato } from '../../types'
 
-import { CREATE_POTATO, LOAD_POTATO } from './actionTypes'
-import type { CreatePotato, LoadPotato } from './actionTypes'
+import { CREATE_POTATO, LOAD_POTATOS } from './actionTypes'
+import type { CreatePotato, LoadPotatos } from './actionTypes'
 
 export function createPotato(potato: Potato): CreatePotato {
 	return {
@@ -10,9 +10,9 @@ export function createPotato(potato: Potato): CreatePotato {
 		potato,
 	}
 }
-export function loadPotato(potatos: Potato[]): LoadPotato {
+export function loadPotatos(potatos: Potato[]): LoadPotatos {
 	return {
-		type: LOAD_POTATO,
+		type: LOAD_POTATOS,
 		potatos,
 	}
 }

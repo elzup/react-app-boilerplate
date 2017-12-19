@@ -1,4 +1,4 @@
 {
-	"plugins": ["lodash"],
-	"presets": [["@babel/env", { "targets": { "node": 9 } }]]
+	"presets": ["react-app"],
+	"plugins": ["lodash"]
 }
