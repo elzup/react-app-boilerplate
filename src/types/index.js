@@ -46,3 +46,9 @@ export type Item = {
 	id: number,
 	name: string,
 }
+
+export type Potato = {
+	id: number,
+	owner: number,
+	text: string,
+}

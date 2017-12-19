@@ -24,7 +24,7 @@ const LoginedContainer = (props: Props) => (
 const AuthContainer = (props: Props) => (
 	<div>
 		<p>Not logined</p>
-		<button onClick={props.doLogin}>Login</button>
+		<p onClick={props.doLogin}>Login</p>
 	</div>
 )
 
@@ -35,10 +35,10 @@ class Container extends React.Component<Props> {
 
 	render() {
 		const { props } = this
-		if (!props.authorized) {
-			return <LoginedContainer {...props} />
+		if (!props.auth.authorized) {
+			return <AuthContainer {...props} />
 		}
-		return <AuthContainer {...props} />
+		return <LoginedContainer {...props} />
 	}
 }
 

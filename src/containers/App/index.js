@@ -7,6 +7,8 @@ import Home from '../../components/Home'
 import StyledLink from '../../components/StyledLink'
 import GoogleAuthContainer from '../GoogleAuthContainer'
 
+import '../../firebase'
+
 const SafeHome = props => {
 	const params = queryString.parse(props.location.search)
 	if (params.p) {
