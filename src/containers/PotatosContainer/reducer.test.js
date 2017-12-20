@@ -8,7 +8,10 @@ test('provide the initial state', () => {
 
 test('handle CREATE_POTATO', () => {
 	expect(
-		reducer(initialState, actions.createPotato({ id: 0, owner: 0, text: '' })),
+		reducer(
+			initialState,
+			actions.createPotato({ id: 0, owner: 0, text: '', publish: true }),
+		),
 	).toEqual([])
 })
 
@@ -16,7 +19,7 @@ test('handle LOAD_POTATOS', () => {
 	expect(
 		reducer(
 			initialState,
-			actions.loadPotatos([{ id: 1, owner: 1, text: 'hoge' }]),
+			actions.loadPotatos([{ id: 1, owner: 1, text: 'hoge', publish: true }]),
 		),
 	).toEqual([1])
 })
