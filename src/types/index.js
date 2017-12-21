@@ -29,7 +29,27 @@ type ThunkDispatch<A> = (ta: ThunkAction) => A
 export type Dispatch = ReduxDispatch<Action> & ThunkDispatch<Action>
 export type Store = ReduxStore<State, Action, Dispatch>
 
+export type Auth = {
+	authorized: boolean,
+	uid: string,
+	displayName: ?string,
+	email: ?string,
+}
+
+export type FirebaseUser = {
+	uid: string,
+	displayName: ?string,
+	email: ?string,
+}
+
 export type Item = {
 	id: number,
 	name: string,
+}
+
+export type Potato = {
+	id: number,
+	publish: boolean,
+	owner: number,
+	text: string,
 }

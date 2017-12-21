@@ -3,11 +3,11 @@
 import camelcaseKeysRecursive from 'camelcase-keys-recursive'
 import { normalizeQuestions } from './normalize'
 import request from 'superagent'
-import config from '../config'
+// import config from '../config'
 
 import type { Item } from '../types'
 
-const host = config.fugaURL
+const host = 'http://sample.com'
 
 const baseHeaders = {
 	'Content-Type': 'application/json',

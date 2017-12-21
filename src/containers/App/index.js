@@ -1,15 +1,13 @@
 // @flow
 import React from 'react'
-import {
-	BrowserRouter as Router,
-	Route,
-	Link,
-	Redirect,
-} from 'react-router-dom'
+import { HashRouter as Router, Route, Link, Redirect } from 'react-router-dom'
 import queryString from 'query-string'
 
 import Home from '../../components/Home'
 import StyledLink from '../../components/StyledLink'
+import GoogleAuthContainer from '../GoogleAuthContainer'
+
+import '../../firebase'
 
 const SafeHome = props => {
 	const params = queryString.parse(props.location.search)
@@ -74,6 +72,9 @@ const App = () => (
 				<li>
 					<StyledLink to="/topics" label="Topics" />
 				</li>
+				<li>
+					<StyledLink to="/login" label="Login" />
+				</li>
 			</ul>
 
 			<hr />
@@ -81,6 +82,7 @@ const App = () => (
 			<Route exact path="/" component={SafeHome} />
 			<Route path="/about" component={About} />
 			<Route path="/topics" component={Topics} />
+			<Route path="/login" component={GoogleAuthContainer} />
 		</div>
 	</Router>
 )

@@ -9,12 +9,11 @@ type Props = {}
 
 class Container extends React.Component<Props> {
 	render() {
-		const { props } = this
-		return <div>{JSON.stringify(props)}</div>
+		return <div>{'hello'}</div>
 	}
 }
 
-const ms = (state: State) => ({ })
+const ms = (state: State) => ({})
 
 const conn: Connector<OProps, Props> = connect(ms, {})
 
