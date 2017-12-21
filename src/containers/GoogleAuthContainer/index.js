@@ -3,7 +3,8 @@ import * as React from 'react'
 import { connect, type Connector } from 'react-redux'
 
 import type { State, Auth } from '../../types'
-import { doLogin, refLogin } from './logic'
+import { doLogin, refLogin, addPotato } from './logic'
+import TextForm from '../../components/TextForm'
 // import * as selectors from './selectors'
 
 type OProps = {}
@@ -11,6 +12,7 @@ type Props = {
 	auth: Auth,
 	refLogin: Function,
 	doLogin: Function,
+	addPotato: Function,
 }
 
 const LoginedContainer = (props: Props) => (
@@ -18,6 +20,9 @@ const LoginedContainer = (props: Props) => (
 		<p>Logined</p>
 		<p>name: {props.auth.displayName}</p>
 		<p>mail: {props.auth.email}</p>
+		<div>
+			<TextForm onSubmit={props.addPotato} />
+		</div>
 	</div>
 )
 
@@ -46,6 +51,10 @@ const ms = (state: State) => ({
 	auth: state.GoogleAuthContainer,
 })
 
-const conn: Connector<OProps, Props> = connect(ms, { doLogin, refLogin })
+const conn: Connector<OProps, Props> = connect(ms, {
+	doLogin,
+	refLogin,
+	addPotato,
+})
 
 export default conn(Container)

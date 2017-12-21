@@ -17,6 +17,7 @@
 		"camelcase-keys-recursive": "^0.8.2",
 		"firebase": "^4.8.0",
 		"lodash": "^4.17.4",
+		"material-ui": "^0.20.0",
 		"moment": "^2.19.2",
 		"normalizr": "^3.2.4",
 		"query-string": "^5.0.1",

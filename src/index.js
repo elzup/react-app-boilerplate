@@ -2,6 +2,8 @@
 import * as React from 'react'
 import { Provider } from 'react-redux'
 import ReactDOM from 'react-dom'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+
 import App from './containers/App'
 import registerServiceWorker from './config/registerServiceWorker'
 import configureStore from './store'
@@ -19,7 +21,9 @@ const rootEl = document.getElementById('root')
 if (rootEl !== null) {
 	ReactDOM.render(
 		<Provider store={store}>
-			<App />
+			<MuiThemeProvider>
+				<App />
+			</MuiThemeProvider>
 		</Provider>,
 		rootEl,
 	)

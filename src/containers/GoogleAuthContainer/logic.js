@@ -31,6 +31,7 @@ export function addPotato(text: string): ThunkAction {
 			.push({
 				publish: false,
 				text: text,
+				timestamp: firebase.database.ServerValue.TIMESTAMP,
 			})
 			.catch(error => console.error(error.message))
 	}
