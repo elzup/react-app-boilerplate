@@ -1,8 +1,11 @@
 // @flow
 import firebase from 'firebase'
 
+import { firebaseDb } from '../../firebase'
 import type { ThunkAction, FirebaseUser } from '../../types'
 import * as actions from './actions'
+
+const ref = firebaseDb.ref('potato')
 
 export function doLogin(): ThunkAction {
 	return dispatch => {
@@ -19,5 +22,16 @@ export function refLogin(): ThunkAction {
 			}
 			dispatch(actions.googleLogin(user))
 		})
+	}
+}
+
+export function addPotato(text: string): ThunkAction {
+	return dispatch => {
+		ref
+			.push({
+				publish: false,
+				text: text,
+			})
+			.catch(error => console.error(error.message))
 	}
 }
