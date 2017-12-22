@@ -12,7 +12,7 @@ export default function(state: State = initialState, action: Action): State {
 			return state
 
 		case Actions.LOAD_POTATOS:
-			return [...state, ...action.potatos.map(v => v.id)]
+			return [...state, ...Object.keys(action.potatos)]
 
 		default:
 			return state

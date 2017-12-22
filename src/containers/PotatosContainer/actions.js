@@ -10,7 +10,7 @@ export function createPotato(potato: Potato): CreatePotato {
 		potato,
 	}
 }
-export function loadPotatos(potatos: Potato[]): LoadPotatos {
+export function loadPotatos(potatos: { [id: string]: Potato }): LoadPotatos {
 	return {
 		type: LOAD_POTATOS,
 		potatos,

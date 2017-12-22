@@ -55,8 +55,7 @@ export function watchPotatoes(): ThunkAction {
 		myPotatoesRef.on(
 			'value',
 			snapshot => {
-				console.log(snapshot)
-				// dispatch(loadPotatos(snapshot))
+				dispatch(loadPotatos(snapshot.val()))
 			},
 			console.error,
 		)

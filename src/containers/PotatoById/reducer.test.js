@@ -10,7 +10,16 @@ test('handle LOAD_POTATOS', () => {
 	expect(
 		reducer(
 			initialState,
-			actions.loadPotatos([{ id: 1, owner: 1, text: 'hoge', publish: true }]),
+			actions.loadPotatos({
+				p1: {
+					owner: 1,
+					text: 'hoge',
+					publish: true,
+					createdAt: 0,
+				},
+			}),
 		),
-	).toEqual({ '1': { id: 1, owner: 1, text: 'hoge', publish: true } })
+	).toEqual({
+		p1: { owner: 1, text: 'hoge', publish: true, createdAt: 0 },
+	})
 })

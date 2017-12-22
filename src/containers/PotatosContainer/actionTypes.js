@@ -18,7 +18,7 @@ export type CreatePotato = {
 
 export type LoadPotatos = {
 	type: typeof LOAD_POTATOS,
-	potatos: Potato[],
+	potatos: { [id: string]: Potato },
 }
 
 export type Action = CreatePotato | LoadPotatos
