@@ -7,12 +7,12 @@
 			"$user_id": {
 				".write": "auth.uid === $user_id",
 
-				"potatos": {
+				"potatoes": {
 					".read": "auth.uid === $user_id"
 				}
 			}
 		},
-		"potatos": {
+		"potatoes": {
 			".read": true,
 			".write": "auth !== null"
 		}

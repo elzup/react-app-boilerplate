@@ -1,6 +1,7 @@
 // @flow
 import type { Action } from '../../types'
 import { Actions } from './actionTypes'
+import _ from 'lodash'
 
 export type State = Array<number | string>
 
@@ -12,7 +13,7 @@ export default function(state: State = initialState, action: Action): State {
 			return state
 
 		case Actions.LOAD_POTATOS:
-			return [...state, ...action.potatos.map(v => v.id)]
+			return _.union(state, Object.keys(action.potatos))
 
 		default:
 			return state
