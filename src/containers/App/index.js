@@ -6,6 +6,7 @@ import queryString from 'query-string'
 import Home from '../../components/Home'
 import StyledLink from '../../components/StyledLink'
 import GoogleAuthContainer from '../GoogleAuthContainer'
+import PotatoContainer from '../../containers/PotatoById'
 
 import '../../firebase'
 
@@ -83,6 +84,7 @@ const App = () => (
 			<Route path="/about" component={About} />
 			<Route path="/topics" component={Topics} />
 			<Route path="/login" component={GoogleAuthContainer} />
+			<Route path="/potato/:id" component={PotatoContainer} />
 		</div>
 	</Router>
 )

@@ -4,17 +4,22 @@ import { connect, type Connector } from 'react-redux'
 import type { State, Potato } from '../../types'
 // import * as selectors from './selectors'
 
-type OProps = {}
+type OProps = { id: string }
 type Props = { potato: Potato }
 
 class Container extends React.Component<Props> {
 	render() {
 		const { props } = this
-		return <div>{props.potato.owner}</div>
+		if (!props.potato) {
+			return <div>Not found</div>
+		}
+		return <div>{props.potato.text}</div>
 	}
 }
 
-const ms = (state: State) => ({})
+const ms = (state: State, oProps: OProps) => ({
+	potato: state.PotatoById[oProps.id],
+})
 
 const conn: Connector<OProps, Props> = connect(ms, {})
 

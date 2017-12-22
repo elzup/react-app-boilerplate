@@ -48,6 +48,7 @@ export type Item = {
 }
 
 export type Potato = {
+	id?: string,
 	publish: boolean,
 	owner?: number,
 	createdAt: number,
