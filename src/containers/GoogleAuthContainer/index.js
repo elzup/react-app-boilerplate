@@ -3,7 +3,7 @@ import * as React from 'react'
 import { connect, type Connector } from 'react-redux'
 
 import type { State, Auth } from '../../types'
-import { doLogin, refLogin, addPotato } from './logic'
+import { doLogin, refLogin, addPotato, watchPotatoes } from './logic'
 import TextForm from '../../components/TextForm'
 // import * as selectors from './selectors'
 
@@ -13,6 +13,7 @@ type Props = {
 	refLogin: Function,
 	doLogin: Function,
 	addPotato: Function,
+	watchPotatoes: Function,
 }
 
 const LoginedContainer = (props: Props) => (
@@ -36,6 +37,7 @@ const AuthContainer = (props: Props) => (
 class Container extends React.Component<Props> {
 	componentDidMount() {
 		this.props.refLogin()
+		// this.props.watchPotatoes()
 	}
 
 	render() {
@@ -55,6 +57,7 @@ const conn: Connector<OProps, Props> = connect(ms, {
 	doLogin,
 	refLogin,
 	addPotato,
+	watchPotatoes,
 })
 
 export default conn(Container)
