@@ -30,3 +30,14 @@ test('handle LOAD_POTATOS', () => {
 		),
 	).toEqual(['p1'])
 })
+
+test('handle LOAD_POTATOS', () => {
+	expect(
+		reducer(
+			['p1'],
+			actions.loadPotatos({
+				p1: { owner: 1, text: 'hoge', publish: true, createdAt: 0 },
+			}),
+		),
+	).toEqual(['p1'])
+})
