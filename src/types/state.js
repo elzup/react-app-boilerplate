@@ -4,6 +4,7 @@ import type { State as ItemById } from '../containers/ItemById/reducer'
 import type { State as ItemsContainer } from '../containers/ItemsContainer/reducer'
 import type { State as PotatoById } from '../containers/PotatoById/reducer'
 import type { State as PotatosContainer } from '../containers/PotatosContainer/reducer'
+import type { State as TwitterAuthContainer } from '../containers/TwitterAuthContainer/reducer'
 
 export type State = {
 	GoogleAuthContainer: GoogleAuthContainer,
@@ -11,4 +12,5 @@ export type State = {
 	ItemsContainer: ItemsContainer,
 	PotatoById: PotatoById,
 	PotatosContainer: PotatosContainer,
+	TwitterAuthContainer: TwitterAuthContainer,
 }

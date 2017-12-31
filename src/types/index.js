@@ -42,6 +42,12 @@ export type FirebaseUser = {
 	email: ?string,
 }
 
+export type TwitterUser = {
+	uid: string,
+	screenName: string,
+	displayName: string,
+}
+
 export type Item = {
 	id: number,
 	name: string,
