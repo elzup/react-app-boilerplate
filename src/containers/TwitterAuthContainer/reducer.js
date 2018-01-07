@@ -16,23 +16,13 @@ export default function(state: State = initialState, action: Action): State {
 		case Actions.TWITTER_LOGIN:
 			return {
 				...state,
-			}
-
-		case Actions.TWITTER_LOGOUT:
-			return {
-				...state,
-			}
-
-		case Actions.GOOGLE_LOGIN:
-			return {
-				...state,
 				uid: action.firebaseUser.uid,
 				displayName: action.firebaseUser.displayName || 'no name',
 				email: action.firebaseUser.email || 'no email',
 				authorized: true,
 			}
 
-		case Actions.GOOGLE_LOGOUT:
+		case Actions.TWITTER_LOGOUT:
 			return {
 				...state,
 				authorized: false,

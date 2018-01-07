@@ -62,7 +62,7 @@ class Container extends React.Component<Props> {
 }
 
 const ms = (state: State) => ({
-	auth: state.GoogleAuthContainer,
+	auth: state.TwitterAuthContainer,
 	potatoes: _.map(state.PotatoById, (v, k) => ({ ...v, id: k })),
 })
 

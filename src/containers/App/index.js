@@ -6,6 +6,7 @@ import queryString from 'query-string'
 import Home from '../../components/Home'
 import StyledLink from '../../components/StyledLink'
 import GoogleAuthContainer from '../GoogleAuthContainer'
+import TwitterAuthConainer from '../TwitterAuthContainer'
 import PotatoContainer from '../../containers/PotatoById'
 
 import '../../firebase'
@@ -74,7 +75,10 @@ const App = () => (
 					<StyledLink to="/topics" label="Topics" />
 				</li>
 				<li>
-					<StyledLink to="/login" label="Login" />
+					<StyledLink to="/login" label="Google Auth" />
+				</li>
+				<li>
+					<StyledLink to="/tlogin" label="Twitter Auth" />
 				</li>
 			</ul>
 
@@ -85,6 +89,7 @@ const App = () => (
 			<Route path="/topics" component={Topics} />
 			<Route path="/login" component={GoogleAuthContainer} />
 			<Route path="/potato/:id" component={PotatoContainer} />
+			<Route path="/tlogin" component={TwitterAuthConainer} />
 		</div>
 	</Router>
 )
