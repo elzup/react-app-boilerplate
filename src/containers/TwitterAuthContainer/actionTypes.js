@@ -13,6 +13,7 @@ export const Actions = {
 
 export type TwitterLogin = {
 	type: typeof TWITTER_LOGIN,
+	firebaseUser: FirebaseUser,
 }
 export type TwitterLogout = {
 	type: typeof TWITTER_LOGOUT,

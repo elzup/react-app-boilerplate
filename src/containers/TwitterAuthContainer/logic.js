@@ -8,7 +8,7 @@ import { loadPotatos } from '../PotatosContainer/actions'
 
 export function doLogin(): ThunkAction {
 	return dispatch => {
-		const provider = new firebase.auth.GoogleAuthProvider()
+		const provider = new firebase.auth.TwitterAuthProvider()
 		firebase.auth().signInWithPopup(provider)
 	}
 }
@@ -19,7 +19,7 @@ export function refLogin(): ThunkAction {
 			if (!user) {
 				return
 			}
-			dispatch(actions.googleLogin(user))
+			dispatch(actions.twitterLogin(user))
 			dispatch(watchPotatoes())
 		})
 	}
