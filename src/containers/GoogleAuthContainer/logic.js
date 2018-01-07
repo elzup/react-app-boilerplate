@@ -25,6 +25,13 @@ export function refLogin(): ThunkAction {
 	}
 }
 
+export function doLogout(): ThunkAction {
+	return async dispatch => {
+		await firebase.auth().signOut()
+		actions.googleLogout()
+	}
+}
+
 export function addPotato(text: string): ThunkAction {
 	return dispatch => {
 		const user = firebase.auth().currentUser
