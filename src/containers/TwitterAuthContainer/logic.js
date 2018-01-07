@@ -13,9 +13,24 @@ export function doLogin(): ThunkAction {
 	}
 }
 
+export function doLogout(): ThunkAction {
+	return dispatch => {
+		console.log('call')
+		firebase
+			.auth()
+			.signOut()
+			.then(() => {
+				console.log('end')
+				actions.twitterLogout()
+			})
+			.catch(console.log)
+	}
+}
+
 export function refLogin(): ThunkAction {
 	return dispatch => {
 		firebase.auth().onAuthStateChanged((user: ?FirebaseUser) => {
+			console.log(user)
 			if (!user) {
 				return
 			}

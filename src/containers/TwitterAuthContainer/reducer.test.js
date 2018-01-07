@@ -6,11 +6,11 @@ test('provide the initial state', () => {
 	expect(reducer(undefined, { type: '@@INIT' })).toEqual(initialState)
 })
 
-test('handle GOOGLE_LOGIN', () => {
+test('handle TWITTER_LOGIN', () => {
 	expect(
 		reducer(
 			initialState,
-			actions.googleLogin({
+			actions.twitterLogin({
 				uid: 'hoge',
 				displayName: 'ハロー',
 				email: 'piyo@a.b',
@@ -21,24 +21,6 @@ test('handle GOOGLE_LOGIN', () => {
 		uid: 'hoge',
 		displayName: 'ハロー',
 		email: 'piyo@a.b',
-	})
-})
-
-test('handle GOOGLE_LOGOUT', () => {
-	expect(reducer(initialState, actions.googleLogout())).toEqual({
-		authorized: false,
-		uid: '',
-		displayName: '',
-		email: '',
-	})
-})
-
-test('handle TWITTER_LOGIN', () => {
-	expect(reducer(initialState, actions.twitterLogin())).toEqual({
-		authorized: false,
-		uid: '',
-		displayName: '',
-		email: '',
 	})
 })
 
