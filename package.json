@@ -60,6 +60,7 @@
 		"redux-thunk": "^2.2.0",
 		"s2s": "^0.18.1",
 		"s2s-plugins-redux": "^0.4.5",
+		"s2s-templates-redux": "^0.2.0",
 		"style-loader": "0.20.2",
 		"styled-components": "^3.1.6",
 		"superagent": "^3.8.2",
@@ -73,8 +74,12 @@
 	"devDependencies": {},
 	"homepage": "https://elzup.github.io/react-app-boilerplate",
 	"jest": {
-		"collectCoverageFrom": ["src/**/*.{js,jsx,mjs}"],
-		"setupFiles": ["<rootDir>/config/polyfills.js"],
+		"collectCoverageFrom": [
+			"src/**/*.{js,jsx,mjs}"
+		],
+		"setupFiles": [
+			"<rootDir>/config/polyfills.js"
+		],
 		"testMatch": [
 			"<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
 			"<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
@@ -84,10 +89,11 @@
 		"transform": {
 			"^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
 			"^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-			"^(?!.*\\.(js|jsx|mjs|css|json)$)":
-				"<rootDir>/config/jest/fileTransform.js"
+			"^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
 		},
-		"transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"],
+		"transformIgnorePatterns": [
+			"[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+		],
 		"moduleNameMapper": {
 			"^react-native$": "react-native-web"
 		},
@@ -102,17 +108,18 @@
 		]
 	},
 	"lint-staged": {
-		"src/**/*.js": ["prettier --config ./.prettierrc --write", "git add"]
+		"src/**/*.js": [
+			"prettier --config ./.prettierrc --write",
+			"git add"
+		]
 	},
 	"private": true,
 	"scripts": {
 		"build": "node scripts/build.js",
-		"coveralls":
-			"cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+		"coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
 		"deploy": "npm run build && gh-pages -d build",
 		"flow": "flow",
-		"gen:env":
-			"cp templates/temp.env .env.development.local && cp templates/temp.env .env.production.local",
+		"gen:env": "cp templates/temp.env .env.development.local && cp templates/temp.env .env.production.local",
 		"precommit": "lint-staged",
 		"start": "node scripts/start.js",
 		"test": "node scripts/test.js --env=jsdom --coverage"
