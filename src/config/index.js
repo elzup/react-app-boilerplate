@@ -26,14 +26,7 @@ if (
 
 type Config = {
 	+isDev: boolean,
-	+firebase: {
-		+apiKey: string,
-		+authDomain: string,
-		+databaseURL: string,
-		+projectId: string,
-		+storageBucket: string,
-		+messagingSenderId: string,
-	},
+	+firebase: $npm$firebase$Config,
 	+admin: {
 		+name: string,
 		+countMax: number,

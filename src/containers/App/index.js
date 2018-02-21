@@ -3,25 +3,24 @@ import React from 'react'
 import { HashRouter as Router, Route, Link } from 'react-router-dom'
 
 import Home from '../../containers/Home'
-import StyledLink from '../../components/StyledLink'
 import GoogleAuthContainer from '../GoogleAuthContainer'
 import TwitterAuthConainer from '../TwitterAuthContainer'
 import PotatoContainer from '../../containers/PotatoById'
 
-import '../../firebase'
+import '../../services/firebase'
 
 const App = () => (
 	<Router>
 		<div>
 			<ul>
 				<li>
-					<StyledLink to="/" label="Home" />
+					<Link to="/">Home</Link>
 				</li>
 				<li>
-					<StyledLink to="/login" label="Google Auth" />
+					<Link to="/login">Google Auth</Link>
 				</li>
 				<li>
-					<StyledLink to="/tlogin" label="Twitter Auth" />
+					<Link to="/tlogin">Twitter Auth</Link>
 				</li>
 			</ul>
 

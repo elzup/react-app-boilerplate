@@ -31,29 +31,31 @@ export type Store = ReduxStore<State, Action, Dispatch>
 
 export type ID = number | string
 
-export type Auth = {|
+// @HACKME https://github.com/facebook/flow/issues/2405
+
+export type Auth = {
 	+authorized: boolean,
 	+uid: string,
 	+displayName: ?string,
 	+email: ?string,
-|}
+}
 
-export type FirebaseUser = {|
+export type FirebaseUser = {
 	+uid: string,
 	+displayName: ?string,
 	+email: ?string,
-|}
+}
 
-export type TwitterUser = {|
+export type TwitterUser = {
 	+uid: string,
 	+screenName: string,
 	+displayName: string,
-|}
+}
 
-export type Potato = {|
+export type Potato = {
 	+id: ID,
 	+publish: boolean,
 	+owner?: number,
 	+createdAt: number,
 	+text: string,
-|}
+}

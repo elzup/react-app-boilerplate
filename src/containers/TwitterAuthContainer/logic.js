@@ -1,7 +1,7 @@
 // @flow
 import firebase from 'firebase'
 
-import { firebaseDb } from '../../firebase'
+import { firebaseDb } from '../../services/firebase'
 import type { ThunkAction, FirebaseUser } from '../../types'
 import * as actions from './actions'
 import { loadPotatos } from '../PotatosContainer/actions'
