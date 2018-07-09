@@ -29,34 +29,40 @@ type ThunkDispatch<A> = (ta: ThunkAction) => A
 export type Dispatch = ReduxDispatch<Action> & ThunkDispatch<Action>
 export type Store = ReduxStore<State, Action, Dispatch>
 
+export type ID = number | string
+
+// @HACKME https://github.com/facebook/flow/issues/2405
+
 export type Auth = {
-	authorized: boolean,
-	uid: string,
-	displayName: ?string,
-	email: ?string,
+	+authorized: boolean,
+	+uid: string,
+	+displayName: ?string,
+	+email: ?string,
+}
+
+export type Auth0 = {
+	+authorized: boolean,
+	+uid: string,
+	+displayName: ?string,
+	+email: ?string,
 }
 
 export type FirebaseUser = {
-	uid: string,
-	displayName: ?string,
-	email: ?string,
+	+uid: string,
+	+displayName: ?string,
+	+email: ?string,
 }
 
 export type TwitterUser = {
-	uid: string,
-	screenName: string,
-	displayName: string,
-}
-
-export type Item = {
-	id: number,
-	name: string,
+	+uid: string,
+	+screenName: string,
+	+displayName: string,
 }
 
 export type Potato = {
-	id?: string,
-	publish: boolean,
-	owner?: number,
-	createdAt: number,
-	text: string,
+	+id: ID,
+	+publish: boolean,
+	+owner?: number,
+	+createdAt: number,
+	+text: string,
 }

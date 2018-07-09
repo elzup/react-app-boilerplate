@@ -1,5 +1,5 @@
-// flow-typed signature: a7b8f0098b92d3aa18384a8bba40247b
-// flow-typed version: 3c3546d42d/firebase_v4.x.x/flow_>=v0.34.x
+// flow-typed signature: 81e462c402e9ebb119634610fb319226
+// flow-typed version: c38c0ed18a/firebase_v4.x.x/flow_>=v0.34.x
 
 /* @flow */
 /** ** firebase ****/
@@ -83,7 +83,16 @@ declare interface $npm$firebase$auth$ApplicationVerifier {
   verify(): Promise<string>;
 }
 
+declare type $npm$firebase$auth$Auth$Persistence = {
+  +LOCAL: 'local',
+  +SESSION: 'session',
+  +NONE: 'none',
+}
+
+declare type $npm$firebase$auth$Auth$Persistence$Enum = $Values<$npm$firebase$auth$Auth$Persistence>
+
 declare class $npm$firebase$auth$Auth {
+  static Persistence: $npm$firebase$auth$Auth$Persistence;
   app: $npm$firebase$App;
   currentUser: $npm$firebase$auth$User;
   applyActionCode(code: string): Promise<void>;
@@ -106,6 +115,7 @@ declare class $npm$firebase$auth$Auth {
     completed?: () => void
   ): () => void;
   sendPasswordResetEmail(email: string): Promise<void>;
+  setPersistence(persistence: $npm$firebase$auth$Auth$Persistence$Enum): Promise<void>;
   signInAndRetrieveDataWithCredential(
     credential: $npm$firebase$auth$AuthCredential
   ): Promise<$npm$firebase$auth$UserCredential>;

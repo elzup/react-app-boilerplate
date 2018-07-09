@@ -2,7 +2,10 @@
 import * as React from 'react'
 import { Provider } from 'react-redux'
 import ReactDOM from 'react-dom'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import { PersistGate } from 'redux-persist/integration/react'
+import { MuiThemeProvider } from '@material-ui/core/styles'
+import theme from './theme'
 
 import App from './containers/App'
 import registerServiceWorker from './config/registerServiceWorker'
@@ -14,16 +17,19 @@ import './config/init'
 
 console.log(config)
 
-const store = configureStore()
+const { store, persistor } = configureStore()
 // store.dispatch(thunkWorld())
 const rootEl = document.getElementById('root')
 
 if (rootEl !== null) {
 	ReactDOM.render(
 		<Provider store={store}>
-			<MuiThemeProvider>
-				<App />
-			</MuiThemeProvider>
+			<PersistGate loading={<h3>Loading</h3>} persistor={persistor}>
+				<CssBaseline />
+				<MuiThemeProvider theme={theme}>
+					<App />
+				</MuiThemeProvider>
+			</PersistGate>
 		</Provider>,
 		rootEl,
 	)

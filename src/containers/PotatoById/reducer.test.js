@@ -12,6 +12,7 @@ test('handle LOAD_POTATOS', () => {
 			initialState,
 			actions.loadPotatos({
 				p1: {
+					id: 'p1',
 					owner: 1,
 					text: 'hoge',
 					publish: true,
@@ -20,6 +21,12 @@ test('handle LOAD_POTATOS', () => {
 			}),
 		),
 	).toEqual({
-		p1: { owner: 1, text: 'hoge', publish: true, createdAt: 0 },
+		p1: {
+			id: 'p1',
+			owner: 1,
+			text: 'hoge',
+			publish: true,
+			createdAt: 0,
+		},
 	})
 })

@@ -1,21 +1,25 @@
 // @flow
 import * as React from 'react'
-import { connect, type Connector } from 'react-redux'
+import { connect } from 'react-redux'
 import type { State } from '../../types'
 // import * as selectors from './selectors'
 
 type OProps = {}
 type Props = {}
 
+const C = (props: Props) => (
+	<div>{JSON.stringify(props)}</div>
+)
+
 class Container extends React.Component<Props> {
 	render() {
 		const { props } = this
-		return <div>{JSON.stringify(props)}</div>
+		return C(props)
 	}
 }
 
-const ms = (state: State) => ({ })
+const ms = (state: State, op: OProps) => ({ })
 
-const conn: Connector<OProps, Props> = connect(ms, {})
+const conn = connect(ms, {})
 
 export default conn(Container)

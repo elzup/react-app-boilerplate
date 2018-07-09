@@ -11,6 +11,7 @@ test('handle CREATE_POTATO', () => {
 		reducer(
 			initialState,
 			actions.createPotato({
+				id: 'p1',
 				owner: 0,
 				text: '',
 				publish: true,
@@ -25,7 +26,13 @@ test('handle LOAD_POTATOS', () => {
 		reducer(
 			initialState,
 			actions.loadPotatos({
-				p1: { owner: 1, text: 'hoge', publish: true, createdAt: 0 },
+				p1: {
+					id: 'p1',
+					owner: 1,
+					text: 'hoge',
+					publish: true,
+					createdAt: 0,
+				},
 			}),
 		),
 	).toEqual(['p1'])
@@ -36,7 +43,13 @@ test('handle LOAD_POTATOS', () => {
 		reducer(
 			['p1'],
 			actions.loadPotatos({
-				p1: { owner: 1, text: 'hoge', publish: true, createdAt: 0 },
+				p1: {
+					id: 'p1',
+					owner: 1,
+					text: 'hoge',
+					publish: true,
+					createdAt: 0,
+				},
 			}),
 		),
 	).toEqual(['p1'])
