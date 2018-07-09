@@ -13,11 +13,6 @@ export default function(state: State = initialState, action: Action): State {
 				...state,
 			}
 
-		case Actions.DELETE_ITEM:
-			return {
-				...state,
-			}
-
 		default:
 			return state
 	}

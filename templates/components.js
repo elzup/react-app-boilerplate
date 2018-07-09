@@ -3,10 +3,8 @@ import * as React from 'react'
 
 type Props = {}
 
-class Cart extends React.Component<Props> {
-	render() {
-		return <div>hello</div>
-	}
-}
+const C = (props: Props) => (
+	<div>{JSON.stringify(props)}</div>
+)
 
-export default Cart
+export default C

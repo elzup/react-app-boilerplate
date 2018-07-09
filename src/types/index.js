@@ -40,6 +40,13 @@ export type Auth = {
 	+email: ?string,
 }
 
+export type Auth0 = {
+	+authorized: boolean,
+	+uid: string,
+	+displayName: ?string,
+	+email: ?string,
+}
+
 export type FirebaseUser = {
 	+uid: string,
 	+displayName: ?string,
