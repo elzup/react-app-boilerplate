@@ -3,8 +3,8 @@ import * as React from 'react'
 
 type Props = {}
 
-const C = (props: Props) => (
-	<div>{JSON.stringify(props)}</div>
-)
+const <%= DIRNAME %> = (props: Props) => {
+  return <div>{JSON.stringify(props)}</div>
+}
 
-export default C
+export default <%= DIRNAME %>

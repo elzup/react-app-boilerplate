@@ -1,25 +1,27 @@
 // @flow
 import * as React from 'react'
 import { connect } from 'react-redux'
-import type { State } from '../../types'
+import type { State as RootState } from '../../types'
 // import * as selectors from './selectors'
 
-type OProps = {}
 type Props = {}
 
-const C = (props: Props) => (
-	<div>{JSON.stringify(props)}</div>
-)
+const C = (props: Props) => {
+  return <div>{JSON.stringify(props)}</div>
+}
 
-class Container extends React.Component<Props> {
+class <%= DIRNAME %> extends React.Component<Props> {
 	render() {
 		const { props } = this
 		return C(props)
 	}
 }
 
-const ms = (state: State, op: OProps) => ({ })
+const ms = (state: RootState) => ({})
 
-const conn = connect(ms, {})
+const conn = connect(
+	ms,
+	{},
+)
 
-export default conn(Container)
+export default conn(<%= DIRNAME %>)
